@@ -1,11 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from mysql import connector
-import mysql.connector
 
 app = Flask(__name__)
 
-# Configure the SQLite database
+# Configure the database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://admin:admin123@database-1.cccicy4zloz7.ap-south-1.rds.amazonaws.com:3306/db1'
 db = SQLAlchemy(app)
 
